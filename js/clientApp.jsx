@@ -1,9 +1,12 @@
+import React from 'react';
+import { render } from 'react-dom';
+
 const myTitle = props => {
   return React.createElement(
-    "div",
-    { className: "childDiv" },
+    'div',
+    { className: 'childDiv' },
     React.createElement(
-      "h1",
+      'h1',
       {
         className: props.class,
         style: { color: props.color }
@@ -15,32 +18,29 @@ const myTitle = props => {
 
 const myFirstComponent = () => {
   return React.createElement(
-    "div",
-    { className: "first div" },
+    'div',
+    { className: 'first div' },
     React.createElement(myTitle, {
-      class: "childA",
-      title: "Apple",
-      color: "BlanchedAlmond"
+      class: 'childA',
+      title: 'Apple',
+      color: 'BlanchedAlmond'
     }),
     React.createElement(myTitle, {
-      class: "childB",
-      title: "Banana",
-      color: "BurlyWood"
+      class: 'childB',
+      title: 'Banana',
+      color: 'BurlyWood'
     }),
     React.createElement(myTitle, {
-      class: "childC",
-      title: "Grape",
-      color: "LimeGreen"
+      class: 'childC',
+      title: 'Grape',
+      color: 'LimeGreen'
     }),
     React.createElement(myTitle, {
-      class: "childD",
-      title: "Orange",
-      color: "Lime"
+      class: 'childD',
+      title: 'Orange',
+      color: 'Lime'
     })
   );
 };
 
-ReactDOM.render(
-  React.createElement(myFirstComponent),
-  document.getElementById("app")
-);
+render(React.createElement(myFirstComponent), document.getElementById('app'));
